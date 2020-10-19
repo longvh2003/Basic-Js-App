@@ -1,0 +1,70 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css" integrity="sha384-REHJTs1r2ErKBuJB0fCK99gCYsVjwxHrSU0N7I1zl9vZbggVJXRMsv/sLlOAGb4M" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="mt-4">Invoice</h2>
+        <p>Cong Dinh</p>
+        <p>Ha Noi, Viet Nam</p>
+        <p>0943210000</p>
+        <table class="table" id="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Product Name</th>
+                    <th scope="col">Unit Price</th>
+                    <th scope="col">Quatity</th>
+                    <th scope="col">Subtotal</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row"></th>
+                    <td contenteditable>Doraemon</td>
+                    <td><span>$</span><span contenteditable class="unitPrice" onblur="editPrice()">150.00</span></td>
+                    <td><i class="far fa-minus-square" onclick="decrease(this)"></i><span class="quatity">10</span><i class="far fa-plus-square" onclick="increase(this)"></i></td>
+                    <td><span>$</span><span class="total"></span></td>
+                </tr>
+                <tr>
+                    <th scope="row"></th>
+                    <td contenteditable>Conan</td>
+                    <td><span>$</span><span contenteditable class="unitPrice" onblur="editPrice()">250.00</span></td>
+                    <td><i class=" far fa-minus-square " onclick="decrease(this) "></i><span class="quatity ">20</span><i class="far fa-plus-square " onclick="increase(this) "></i></td>
+                    <td><span>$</span><span class="total "></span></td>
+                </tr>
+                <tr>
+                    <th scope="row "></th>
+                    <td contenteditable>Dragon Ball</td>
+                    <td><span>$</span><span contenteditable class="unitPrice " onblur="editPrice()">100.00</span>
+                    </td>
+                    <td><i class="far fa-minus-square" onclick="decrease(this)"></i><span class="quatity">10</span><i class="far fa-plus-square" onclick="increase(this)"></i></td>
+                    <td><span>$</span><span class="total"></span></td>
+                </tr>
+            </tbody>
+            <tfooter>
+                <tr>
+                    <th colspan="5"><i class="far fa-plus-square" onclick="addColumn()"></i></th>
+                </tr>
+                <tr>
+                    <th scope="row">Total</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><span></span></td>
+                </tr>
+            </tfooter>
+        </table>
+    </div>
+    <script src="./js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</body>
+
+</html>
